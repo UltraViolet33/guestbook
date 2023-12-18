@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ConferenceController extends AbstractController
 {
-    #[Route('/', name: 'app_conference')]
+    #[Route('/', name: 'homepage')]
     public function index(ConferenceRepository $conferenceRepository): Response
     {
         return $this->render('conference/index.html.twig', ["conferences" => $conferenceRepository->findAll()]);
