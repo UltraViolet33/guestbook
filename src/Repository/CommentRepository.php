@@ -25,6 +25,8 @@ class CommentRepository extends ServiceEntityRepository
         parent::__construct($registry, Comment::class);
     }
 
+    
+
     public function getCommentPaginator(Conference $conference, int $offset): Paginator
     {
         $query = $this->createQueryBuilder('c')

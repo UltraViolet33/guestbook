@@ -50,11 +50,8 @@ class CommentCrudController extends AbstractCrudController
             yield TextField::new('author'),
             yield EmailField::new('email'),
             yield TextField::new('text')->hideOnIndex(),
-
-
-
             yield AssociationField::new('conference'),
-            yield $createdAt
+
         ];
     }
 }
