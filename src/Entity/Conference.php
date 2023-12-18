@@ -43,7 +43,7 @@ class Conference
     }
 
     public function getCity(): ?string
-    {
+        {
         return $this->city;
     }
 
