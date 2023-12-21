@@ -12,6 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Filter\EntityFilter;
 
 
@@ -51,6 +52,9 @@ class CommentCrudController extends AbstractCrudController
             yield EmailField::new('email'),
             yield TextField::new('text')->hideOnIndex(),
             yield AssociationField::new('conference'),
+            yield ImageField::new('photoFilename')
+                        ->setBasePath('/uploads/photos')
+                        ->setLabel('Photo')
 
         ];
     }
