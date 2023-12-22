@@ -7,7 +7,7 @@
 {% block body %}
 	<h2>{{ conference }}Conference</h2>
 	{% if comments|length > 0 %}
-		<div>There are{{ comments|length }}comments.</div>
+		<div>There are {{ comments|length }} comments.</div>
 		{% for comment in comments %}
 			{% if comment.photofilename %}
 				<img src="{{ asset('uploads/photos/' ~ comment.photofilename) }}" style="max-width: 200px"/>

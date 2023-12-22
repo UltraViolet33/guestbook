@@ -25,7 +25,7 @@
 			<ul>
 				{% for conference in conferences %}
 					<li>
-						<a href="{{path('conference', {slug:conference.slug})}}">{{conference}}</a>
+						<h4><a href="{{path('conference', {slug:conference.slug})}}">{{conference}}</a></h4>
 					</li>
 				{% endfor %}
 				<hr/>
